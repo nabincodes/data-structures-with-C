@@ -1,7 +1,7 @@
 # Lecture 2
 
 ## Pseudocode for the Push() function
-* Check for **Stack Overflow** condtion
+* Check for **Stack Overflow** condition
 * If the Stack is full, then print the message "Stack Overflow" and return
 * If Stack is not full, then increment **tos** by 1
 * Place the element in the Stack at the index pointed by tos
@@ -17,9 +17,9 @@
 * Decrement **tos** by 1
 * return the deleted element
 
-**Stack Underflow** is the condition that occurs when we try to pop elements from a Stack but the Stack is already element and cannot execute the pop() function.
+**Stack Underflow** is the condition that occurs when we try to pop/remove elements from a Stack but the Stack is already empty and cannot execute the pop() function.
 
-**Note:** Return type of pop() function may be int,float or char
+**Note:** Return type of pop() function may be int, float or char
 
 ### C Program to illustrate the Push() and Pop() function
 

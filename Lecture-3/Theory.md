@@ -24,11 +24,11 @@ Stack is an important data structure used by C language compiler in many program
     }
     ```
     
-   The code shown above displays **30 as output** wven though we have not mentioned tyhe name of variable in printf. It is because **30** is the top value in the Stack and the compiler simply prints this value when nothing is passed.
+   The code shown above displays **30 as output** even though we have not mentioned the name of variable in printf() function. It is because **30** is the top value in the Stack and the compiler simply prints this value when nothing is passed.
     
 2. **To store return address in a function call**: 
 
-   Whenever the compiler encounters function call, it maintains **Stack frame** i.e before leaving the calling function, the compiler pushes the address of next line inside the Stack. Along with this address if some local data is to be send, it is also pushed. Then the compiler executes the called function and when it returns back, it first pops the current top element from the Stack and the resumes the code in calling function. So, we can say that the compiler alwats visits the Stack two times whenever it handles the function call.
+   Whenever the compiler encounters function call, it maintains **Stack frame** i.e before leaving the calling function, the compiler pushes the address of next line inside the Stack. Along with this address if some local data is to be send, it is also pushed. Then the compiler executes the called function and when it returns back, it first pops the current top element from the Stack and the resumes the code in calling function. So, we can say that the compiler always visits the Stack two times whenever it handles the function call.
    
 3. **Argument Passing**: 
 

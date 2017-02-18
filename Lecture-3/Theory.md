@@ -12,7 +12,8 @@
 
 Stack is an important data structure used by C language compiler in many programming situations. Some common cases where compiler internally uses Stack are:
 
-1. **Local Variable**
+1. **Local Variable**: 
+
    All local data stored inside functions gets copied in a Stack. For example:
     ```c
     #include <stdio.h>
@@ -25,10 +26,12 @@ Stack is an important data structure used by C language compiler in many program
     
    The code shown above displays **30 as output** wven though we have not mentioned tyhe name of variable in printf. It is because **30** is the top value in the Stack and the compiler simply prints this value when nothing is passed.
     
-2. **To store return address in a function call**
+2. **To store return address in a function call**: 
+
    Whenever the compiler encounters function call, it maintains **Stack frame** i.e before leaving the calling function, the compiler pushes the address of next line inside the Stack. Along with this address if some local data is to be send, it is also pushed. Then the compiler executes the called function and when it returns back, it first pops the current top element from the Stack and the resumes the code in calling function. So, we can say that the compiler alwats visits the Stack two times whenever it handles the function call.
    
-3. **Argument Passing**
+3. **Argument Passing**: 
+
    Few examples of argument passing are shown below: 
    ```c
    #include <stdio.h>
@@ -77,7 +80,8 @@ Stack is an important data structure used by C language compiler in many program
     ```
     The output of this code above is: **5 6 5**. Did you get it right?
     
-4. **Expressions**
+4. **Expressions**: 
+
 	Compiler use Stack whenever they find an infix expressions and they have to convert it into prefix or postfix form.
     
     In data structures, any statement which contains operators and operands is called as an expression and based upon the placement of operators, expressions are of **three** types:

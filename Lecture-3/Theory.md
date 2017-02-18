@@ -11,6 +11,7 @@
 ## USES OF STACK
 
 Stack is an important data structure used by C language compiler in many programming situations. Some common cases where compiler internally uses Stack are:
+
 1. **Local Variable**
    All local data stored inside functions gets copied in a Stack. For example:
     ```c
@@ -87,6 +88,6 @@ Stack is an important data structure used by C language compiler in many program
 ***
 
 ### Why compiler converts infix expression to prefix or postfix expression?
-We know that to solve an infix operations, the knowledge of operator precedence and associativity is needed. But execution of any instruction in program isn't done by compiler but rather handled by the CPU and CPU doesno't know anything about precedence and associativity  of the operators. So, to make it easier for CPU to solve the expression, the compiler of every programming language converts these infix operations to prefix or postfix form.
+We know that to solve an infix operations, the knowledge of operator precedence and associativity is needed. But execution of any instruction in program isn't done by compiler but rather handled by the CPU and CPU doesn't know anything about precedence and associativity  of the operators. So, to make it easier for CPU to solve the expression, the compiler of every programming language converts these infix operations to prefix or postfix form.
 
 The Sepeciality of these form is that, these expressions can be evaluated from one end to the other end without the knowledge of operator precendence or associativity and results can be obtained.

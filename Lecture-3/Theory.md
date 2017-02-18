@@ -12,7 +12,7 @@
 
 Stack is an important data structure used by C language compiler in many programming situations. Some common cases where compiler internally uses Stack are:
 1. **Local Variable**
-	All local data stored inside functions gets copied in a Stack. For example:
+   All local data stored inside functions gets copied in a Stack. For example:
     ```c
     #include <stdio.h>
     
@@ -21,7 +21,8 @@ Stack is an important data structure used by C language compiler in many program
         printf("%d");
     }
     ```
-    The code shown above displays **30 as output** wven though we have not mentioned tyhe name of variable in printf. It is because **30** is the top value in the Stack and the compiler simply prints this value when nothing is passed.
+    
+   The code shown above displays **30 as output** wven though we have not mentioned tyhe name of variable in printf. It is because **30** is the top value in the Stack and the compiler simply prints this value when nothing is passed.
     
 2. **To store return address in a function call**
    Whenever the compiler encounters function call, it maintains **Stack frame** i.e before leaving the calling function, the compiler pushes the address of next line inside the Stack. Along with this address if some local data is to be send, it is also pushed. Then the compiler executes the called function and when it returns back, it first pops the current top element from the Stack and the resumes the code in calling function. So, we can say that the compiler alwats visits the Stack two times whenever it handles the function call.
@@ -76,3 +77,16 @@ Stack is an important data structure used by C language compiler in many program
     The output of this code above is: **5 6 5**. Did you get it right?
     
 4. **Expressions**
+	Compiler use Stack whenever they find an infix expressions and they have to convert it into prefix or postfix form.
+    
+    In data structures, any statement which contains operators and operands is called as an expression and based upon the placement of operators, expressions are of **three** types:
+    * **Infix Expression**: The operator is in between the operands, e.g **a+b**
+    * **Prefix Expression**: also known as **Polish Notation** and contain operator before operands, e.g **+a b**
+    * **Postfix Expression**: also known as **Reverse Polish Notation** and contain operator after operands, e.g **a b+**
+
+***
+
+### Why compiler converts infix expression to prefix or postfix expression?
+We know that to solve an infix operations, the knowledge of operator precedence and associativity is needed. But execution of any instruction in program isn't done by compiler but rather handled by the CPU and CPU doesno't know anything about precedence and associativity  of the operators. So, to make it easier for CPU to solve the expression, the compiler of every programming language converts these infix operations to prefix or postfix form.
+
+The Sepeciality of these form is that, these expressions can be evaluated from one end to the other end without the knowledge of operator precendence or associativity and results can be obtained.

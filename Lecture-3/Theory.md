@@ -56,7 +56,7 @@ Stack is an important data structure used by C language compiler in many program
    ```
    What will be the output of the above program? If you figured out the output to be : **11 11 12** then you are wrong. The output of the above program is: **13 11 10**. Looks weird to you? Let me explain why is the output so. 
    
-   As I explained earlier, inside the printf function the arguments will be evaluated from **Left to Right**. So, at first **10** will be pushed into the Stack, and then incremented by 1 since it is postfix and value of **i** now becomes **11**. Again, this **11** will be pushed into the Stack and incremented by 1 so that now value of **i** becomes **12**. Finally, due to prefix, it is first incremented by 1 so that its value becomes **13** now and then it is pushed inside the Stack. So the final output is: **13 11 10** not **11 11 12**.
+   As I explained earlier, inside the printf function the arguments will be evaluated from **Right to Left**. So, at first **10** will be pushed into the Stack, and then incremented by 1 since it is postfix and value of **i** now becomes **11**. Again, this **11** will be pushed into the Stack and incremented by 1 so that now value of **i** becomes **12**. Finally, due to prefix, it is first incremented by 1 so that its value becomes **13** now and then it is pushed inside the Stack. So the final output is: **13 11 10** not **11 11 12**.
 
 	Now try to predict the output of this code below:
     ```c
@@ -67,7 +67,7 @@ Stack is an important data structure used by C language compiler in many program
         printf("%d %d %d",a==10, a>5, a=5);
    }
     ```
-	The output of above code is : **0 0 5**. Remember, the argument will be evaluated from **Left to Right**. So, at first **a=5** will execute resulting change in value of a to **5** and **5** will be pushed to Stack. Then **a>5** will be evaluated and the condition is false since a=5 is not greater than 5 so **0** will be pushed into the Stack. Finally, the third condition **a==10** will be also evaluated **False** so again **0** will be pushed into the Stack.
+	The output of above code is : **0 0 5**. Remember, the argument will be evaluated from **Right to Left**. So, at first **a=5** will execute resulting change in value of a to **5** and **5** will be pushed to Stack. Then **a>5** will be evaluated and the condition is false since a=5 is not greater than 5 so **0** will be pushed into the Stack. Finally, the third condition **a==10** will be also evaluated **False** so again **0** will be pushed into the Stack.
     
     Again try to predict the output of this code now:
     ```c
